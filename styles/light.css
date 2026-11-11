@@ -4,7 +4,7 @@
   --bg-image: url(../images/cover-image-light.png);
   --main-text-color: #353430;
   --nav-color: #353430;
-  --nav-hover-color: rgb(50 49 45 / 0.4);
+  --nav-hover-color: rgb(255, 0, 112 / 0.4);
   --main-heading-color: #353430;
   --section-heading-color: #353430;
   --header-logo-color: #ffc2e6;
@@ -22,7 +22,7 @@
     --bg-image: url(../images/cover-image-light.png);
     --main-text-color: #353430;
     --nav-color: #353430;
-    --nav-hover-color: rgb(50 49 45 / 0.4);
+    --nav-hover-color: rgb(255, 0, 112 / 0.4);
     --main-heading-color: #353430;
     --section-heading-color: #353430;
     --header-logo-color: #ffc2e6;

@@ -63,6 +63,7 @@
 
 .header__logo {
   justify-self: start;
+  margin: -15px 0 0 0;
   color: var(--header-logo-color);
   font-size: var(--logo-size);
   line-height: 0.825;
@@ -111,9 +112,18 @@
   pointer-events: none;
 }
 
+.header__text {
+  align-self: center;
+  grid-row: 3;
+  justify-self: end;
+  margin-top: -25px;
+}
+
 .header__paragraph {
+  margin: 5px 0 0 0;
+  font-size: 18px;
   font-weight: bold;
-  line-height: var(--main-line-height);
+  line-height: 23.4px;
 }
 
 .title-decor {
@@ -149,7 +159,7 @@
 }
 
 .content-section__title {
-  margin-block-end: calc(2 * var(--main-gap));
+  padding-bottom: 20px;
   color: var(--section-heading-color);
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
@@ -161,7 +171,7 @@
 
 .text-block__heading {
   font-size: var(--main-text-size);
-  line-height: var(--main-line-height);
+  line-height: 23.4px;
 }
 
 .text-block__main-content {
@@ -174,8 +184,8 @@
 }
 
 .text-block__paragraph {
-  margin-block-start: var(--main-gap);
-  line-height: var(--main-line-height);
+  padding: 10px 0 20px 0;
+  line-height: 23.4px;
 }
 
 .grid-heading {
@@ -190,16 +200,23 @@
 
 .grid__image {
   display: block;
-  inline-size: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.grid__image:first-child {
+  margin-top: -10px;
 }
 
 .footer {
   position: relative;
-  display: grid;
-  place-items: center;
   padding: var(--main-gap);
   block-size: 100vh;
   min-block-size: 668px;
+  margin-top: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @supports (block-size: 100dvb) {
@@ -222,17 +239,20 @@
   }
 
   .header__text {
-    inline-size: 50%;
+    margin-top: -46px;
+    max-width: 50%;
   }
 
   .content {
     padding: calc(3 * var(--main-gap)) var(--main-gap);
+    margin: -56px 10px 0 10px;
   }
 
   .content-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: var(--main-gap);
+    padding-top: 60px;
   }
 
   .content-section:not(:last-of-type) {
@@ -241,6 +261,7 @@
 
   .content-section__title {
     margin-block-end: 0;
+    max-width: 236px;
   }
 
   .text-block {
@@ -271,6 +292,8 @@
 
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 12px 20px;
+    padding: 20px 0 66px 0;
   }
 
   .grid-heading {
@@ -306,12 +329,14 @@
   }
 
   .header__theme-menu {
+    margin: 0;
     justify-self: center;
     align-self: start;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
+    padding: 0;
   }
 
   .content-section {
