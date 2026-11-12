@@ -127,7 +127,6 @@
   align-self: center;
   grid-row: 3;
   justify-self: end;
-  margin-top: -25px;
 }
 
 .header__paragraph {
@@ -195,7 +194,7 @@
 }
 
 .text-block__paragraph {
-  padding: 10px 0 20px 0;
+  margin-block-start: var(--main-gap);
   line-height: 23.4px;
 }
 
@@ -222,7 +221,6 @@
   padding: var(--main-gap);
   block-size: 100vh;
   min-block-size: 668px;
-  margin-top: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,13 +246,11 @@
   }
 
   .header__text {
-    margin-top: -46px;
     max-width: 50%;
   }
 
   .content {
     padding: calc(3 * var(--main-gap)) var(--main-gap);
-    margin: -56px 10px 0 10px;
   }
 
   .content-section {
