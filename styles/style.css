@@ -213,7 +213,6 @@
   position: relative;
   padding: var(--main-gap);
   block-size: 100vh;
-  block-size: 100dvh;
   min-block-size: 668px;
   display: flex;
   justify-content: center;
@@ -329,7 +328,7 @@
   }
 
   .content-section__title {
-    max-width: 100%; 
+    max-width: 100%;
   }
 
   .why .text-blocks {
