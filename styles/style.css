@@ -18,12 +18,6 @@
   min-block-size: 668px;
 }
 
-@supports (block-size: 100dvb) {
-  .header {
-    block-size: 100dvb;
-  }
-}
-
 .decorated-zone::before,
 .decorated-zone::after {
   content: '';
@@ -130,10 +124,9 @@
 }
 
 .header__paragraph {
-  margin: 5px 0 0 0;
-  font-size: 18px;
+  font-size: var(--main-text-size);
   font-weight: bold;
-  line-height: 23.4px;
+  line-height: var(--main-line-height);
 }
 
 .title-decor {
@@ -169,7 +162,7 @@
 }
 
 .content-section__title {
-  padding-bottom: 20px;
+  margin-block-end: calc(2 * var(--main-gap));
   color: var(--section-heading-color);
   font-size: var(--main-text-size);
   line-height: var(--main-line-height);
@@ -181,7 +174,7 @@
 
 .text-block__heading {
   font-size: var(--main-text-size);
-  line-height: 23.4px;
+  line-height: var(--main-line-height);
 }
 
 .text-block__main-content {
@@ -195,7 +188,7 @@
 
 .text-block__paragraph {
   margin-block-start: var(--main-gap);
-  line-height: 23.4px;
+  line-height: var(--main-line-height);
 }
 
 .grid-heading {
@@ -220,16 +213,11 @@
   position: relative;
   padding: var(--main-gap);
   block-size: 100vh;
+  block-size: 100dvh;
   min-block-size: 668px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@supports (block-size: 100dvb) {
-  .footer {
-    block-size: 100dvb;
-  }
 }
 
 .footer__logo {
@@ -257,7 +245,6 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: var(--main-gap);
-    padding-top: 60px;
   }
 
   .content-section:not(:last-of-type) {
@@ -297,18 +284,11 @@
 
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px 20px;
-    padding: 20px 0 66px 0;
+    gap: var(--main-gap);
   }
 
   .grid-heading {
     grid-column: 1/-1;
-  }
-
-  .grid__image {
-    object-fit: cover;
-    object-position: center;
-    block-size: 100%;
   }
 
   .grid__image:first-of-type {
@@ -346,6 +326,10 @@
   .content-section {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--main-gap);
+  }
+
+  .content-section__title {
+    max-width: 100%; 
   }
 
   .why .text-blocks {
